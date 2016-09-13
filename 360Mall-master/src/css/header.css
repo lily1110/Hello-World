@@ -1,0 +1,86 @@
+.topshopcart .cart-list {
+    display: block;
+    padding: 6px 12px;
+}
+.topshopcart .cart-count {
+    background: #f6f6f6;
+    color: #31373c;
+    font-size: 12px;
+    height: 40px;
+    line-height: 40px;
+    padding: 10px 15px 10px 20px;
+}
+.topshopcart .cart-item {
+    border-top: 1px solid #ddd;
+    display: block;
+    height: 72px;
+    line-height: 72px;
+    padding: 6px 0;
+}
+.topshopcart .cart-item:first-child {
+    border-top: none;
+}
+.mod-header a {
+    color: #bfbfbf;
+    font-size: 12px;
+}
+.topshopcart .cart-item .cart-item-price {
+    color: #333;
+    float: left;
+    height: 100%;
+    text-align: right;
+    width: 75px;
+}
+.topshopcart .cart-item .cart-item-num {
+    color: #666;
+    float: left;
+    text-align: center;
+    width: 30px;
+}
+.mod-header a {
+    color: #bfbfbf;
+    font-size: 12px;
+}
+.topshopcart .cart-item .cart-item-del {
+    background: url(https://p.ssl.qhimg.com/t01f2d40797748448d3.png) no-repeat 0 -59px;
+    float: left;
+    height: 16px;
+    margin-top: 28px;
+    width: 16px;
+}
+
+.topshopcart .cart-item .cart-item-img img {
+    float: left;
+    height: 72px;
+    width: 72px;
+}
+
+.topshopcart .cart-item .cart-item-text {
+    color: #666;
+    float: left;
+    line-height: 20px;
+    padding-left: 15px;
+    width: 140px;
+}
+.topshopcart .cart-item .cart-item-text strong {
+    display: table-cell;
+    font-weight: 400;
+    height: 72px;
+    overflow: hidden;
+    vertical-align: middle;
+}
+.topshopcart .cart-buy {
+    background: #30ab38;
+    border-radius: 2px;
+    color: #fff;
+    float: right;
+    font-size: 14px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    width: 120px;
+}
+.topshopcart .cart-count b {
+    color: #e94c30;
+    font-weight: 400;
+}

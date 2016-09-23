@@ -1,9 +1,8 @@
-mall/.idea
-mall/target
-mall/mall.iml
-mall/src/main/webapps/main.iml
-
-360Mall-master/.idea
-360Mall-master/target
-360Mall-master/360Mall-master.iml
-360Mall-master/src/main/webapps/main.iml
+/mall/.idea
+/mall/target
+/mall/mall.iml
+/mall/src/main/webapps/main.iml
+/360Mall-master/.idea
+/360Mall-master/target
+/360Mall-master/360Mall-master.iml
+/360Mall-master/src/main/webapps/main.iml

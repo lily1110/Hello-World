@@ -1,0 +1,31 @@
+@font-face{
+    font-family:'MicrosoftYaHei';
+    font-weight:normal;
+    src:url('../../assets/fonts/yahei/MicrosoftYaHei.ttf');
+}
+@font-face{
+    font-family:'Adobe Heiti Std';
+    font-weight:normal;
+    src:url('../../assets/fonts/heiti/AdobeHeitiStd-Regular.otf');
+}
+@font-face{
+    font-family:'SegoeWPN';
+    font-weight:normal;
+    src:url('../../assets/fonts/segoe/SegoeWPN.ttf');
+}
+@font-face {
+    font-family:'SegoeWPN-Bold';
+    font-weight:normal;
+    src:url('../../assets/fonts/segoe/SegoeWPN-Bold.ttf');
+}
+@font-face {
+    font-family:'SegoeWP-Bold';
+    font-weight:normal;
+    src:url('../../assets/fonts/segoe/SegoeWP-Bold.ttf');
+}
+@font-face {
+    font-family:'SegoeWP';
+    font-weight:normal;
+    src:url('../../assets/fonts/segoe/SegoeWP.ttf');
+}
+

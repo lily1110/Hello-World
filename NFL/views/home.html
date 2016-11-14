@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!--[if lt IE 8]>
+    <script>alert("您的浏览器版本太低了，本站对IE8以下版本浏览器无法提供支持，为保证更好的浏览体验，请升级您的IE或下载其它浏览器。推荐Chrome, Firefox, 360浏览器等!");window.close();
+    </script>
+    <![endif]-->
+    <!--[if lt IE9]>
+    <script src="../assets/public/html5shiv.js"></script>
+    <script src="../assets/public/respond.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="../assets/public/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../public/css/designers.css" />
+    <link rel="stylesheet" type="text/css" href="../public/css/home.css" />
+
+    <script src="../assets/public/jquery-2.2.3.min.js"></script>
+    <script src="../assets/public/bootstrap/js/bootstrap.js"></script>
+
+<body>
+<section class="home-main">
+   <div class="section1">
+        <div class="mask"></div>
+        <div class="content">
+            <div class="title">
+                THINK, CREATE, MAKE.
+            </div>
+            <div class="subtitle">
+                Share your world with the world
+            </div>
+            <div class="button">
+                <a >Sign Up</a>
+            </div>
+        </div>
+   </div>
+   <div class="section2">
+       <div class="content">
+           <div class="title">
+               AMAZING NEW PRODUCTS EVERY DAY
+           </div>
+           <div class="subtitle">
+               Discover our 3D printed collections from the most outstanding designers of China
+           </div>
+       </div>
+       <div class="row">
+           <div class="col-xs-12 col-sm-6 col-md-3">
+               <div class="inner">
+                   <img src="../assets/images/home/home-image3.png" />
+                   <div class="mask">
+                       <div class="center">
+                           Home
+                       </div>
+                   </div>
+                   <div class="shadow"><img src="../assets/images/home/shadow.png" /></div>
+               </div>
+           </div>
+           <div class="col-xs-12 col-sm-6 col-md-3">
+               <div class="inner">
+                   <img src="../assets/images/home/home-image4.png" />
+                   <div class="mask">
+                       <div class="center">
+                           Jewerly
+                       </div>
+                   </div>
+                   <div class="shadow"><img src="../assets/images/home/shadow.png" /></div>
+               </div>
+           </div>
+           <div class="col-xs-12 col-sm-6 col-md-3">
+               <div class="inner">
+                   <img src="../assets/images/home/home-image5.png" />
+                   <div class="mask">
+                       <div class="center">
+                           Art
+                       </div>
+                   </div>
+                   <div class="shadow"><img src="../assets/images/home/shadow.png" /></div>
+               </div>
+           </div>
+           <div class="col-xs-12 col-sm-6 col-md-3">
+               <div class="inner">
+                   <img src="../assets/images/home/home-image6.png" />
+                   <div class="mask">
+                       <div class="center">
+                           Accessories
+                       </div>
+                   </div>
+                   <div class="shadow"><img src="../assets/images/home/shadow.png" /></div>
+               </div>
+           </div>
+       </div>
+   </div>
+   <div class="section3">
+      <div class="mask"></div>
+      <div class="content">
+          <div class="title">
+              DSGNABLE WITH EVERYTHING
+          </div>
+          <div class="subtitle">
+              All the materials you need for a limitless imagination
+          </div>
+      </div>
+   </div>
+   <div class="section4">
+       <div class="mask"></div>
+       <div class="content">
+           <div class="button">
+               <a >Meet them</a>
+           </div>
+           <div class="title">
+               FOLLOW THE BEST DESIGNERS
+           </div>
+           <div class="subtitle">
+               Get in touch with outstandings talents
+           </div>
+       </div>
+   </div>
+   <div class="section5">
+       <div class="mask"></div>
+       <div class="content">
+           <div class="title">
+               JOIN THE COMMUNITY
+           </div>
+           <div class="subtitle">
+               Find out all the advantages to be part of a community of great designers
+           </div>
+           <div class="button">
+               <a >Check the upcoming events</a>
+           </div>
+       </div>
+   </div>
+</section>
+
+<script>
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if (clientWidth >= 640) {
+                        docEl.style.fontSize = '160px';
+                    } else {
+                        docEl.style.fontSize = 160 * (clientWidth / 640) + 'px';
+                    }
+                };
+
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+</script>
+</body>
+</html>

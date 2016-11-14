@@ -1,0 +1,462 @@
+@charset "UTF-8";
+    * {
+        margin: 0;
+        padding: 0;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    html {
+        height: 100%;
+        -webkit-text-size-adjust: none;
+        outline: 0;
+    }
+
+    body {
+        height: 100%;
+        color: #666;
+        font-family: 'Microsoft YaHei','Adobe Heiti Std','SegoeWP', 'SegoeWPN', 'SegoeWPN-Bold', 'DroidSansFallback', 'Aileron Regular', 'STHeiti', 'simhei', 'Open Sans', Arial, 'Hiragino Sans GB',  微软雅黑,
+        'WenQuanYi Micro Hei', SimSun, sans-serif;
+        background: none;
+        overflow-x: hidden;
+        overflow-y: hidden; 
+    }
+
+    ul, li {
+        list-style-type: none;
+    }
+    a {
+        text-decoration: none;
+        color: white;
+      }
+    a:hover {
+        text-decoration: none;
+        color: white;
+      }
+    a:visited {
+      text-decoration: none;
+        color: white;
+    }
+    .hide {
+        display: none;
+    }
+
+    .show {
+        display: block;
+    }
+    .pc {
+      width: 100%;
+      height: 100%;
+    }
+    @media (min-width: 1230px) {
+      .container {
+        width: 1200px;
+      }
+    }
+    .bg {
+      width: 100%;
+      overflow: auto;
+    }
+    .bg img {
+      width: 100%;
+
+    }
+    .dialog {
+        position: absolute;
+        height: auto;
+      }
+    .main-body {
+      position: relative;
+      text-align: center;
+    }
+    .main-body .line.horizontal {
+      height: 1px;
+      background:#59b5fa;
+    }
+    .main-body .bottom {
+    }
+    .main-body .bottom .content {
+      padding-top: 30px;
+    }
+    .main-body .bottom .content .brief {
+      display: inline-block;
+      font-family: "MicrosoftYaHei";
+    }
+    .main-body .bottom .content .brief .title {
+      position: relative;
+      display: block;
+      height: 28px;
+    }
+    .main-body .bottom .content .brief .title i {
+      position: absolute;
+      left: 0px;
+      display: inline-block;
+      background-color: rgb(233, 179, 34);
+      width: 4px;
+      height: 26px;
+      line-height: 1;
+    }
+    .main-body .bottom .content .brief .title div {
+      position: absolute;
+      display: inline-block;
+      left: 8px;
+      font-size: 0.1625rem;
+      line-height: 1;
+      color: rgb(255, 255, 255);
+    }
+    .main-body .bottom .content .brief .detail {
+      margin-top: 10px;
+      color: rgb(230, 230, 230);
+      width: 397.033px;
+      height: 133.431px;
+      overflow: auto;
+      text-align: left;
+      font-size: 0.0875rem;
+    }
+    .main-body .bottom .content .line.vertical {
+      display: inline-block;
+      background:#59b5fa;
+      width: 1px;
+      height: 100%;
+      vertical-align: top;
+      margin-left: 120px;
+      margin-right: 10px;
+    } 
+    .main-body .bottom .content .share {
+      display: inline-block;
+      font-size: 0.1125rem;
+      line-height: 1.2;
+      color: rgb(254, 254, 254);
+    }
+    .main-body .bottom .content .share div{
+      text-align: center;
+    }
+
+    .main-body .bottom .content .share div div{
+      padding-top: 8px;      
+    }
+    .main-body .bottom .content .share i {
+      display: block;
+      width: 49px;
+      height: 49px;
+      margin: 0 auto;
+    }
+    .main-body .bottom .content .share .qq {
+       background-position: 0 0;
+       background-image: url("../images/qq-weibo.png");
+    }  
+    .main-body .bottom .content .share .weibo {
+      background-position: 0 -96px;
+      background-image: url("../images/qq-weibo.png");
+      margin-top: 20px;
+    }
+    .main-body .bottom .content .download {
+      display: inline-block;
+      font-size: 0.1125rem;
+      color: rgb(255, 255, 255);
+      line-height: 1.577;
+      text-align: left;
+      vertical-align: top;
+    }
+    .main-body .bottom .content .download img{
+      display: block;
+      vertical-align: top;
+      max-width: 180px;
+      height: 49px;
+    }
+    .main-body .bottom .content .download .android {
+      margin-top: 20px;
+    }
+    .main-body .bottom .content .qrcode{
+      display: inline-block;
+      text-align: center;
+      color: rgb(255, 255, 255);
+    }
+
+    .main-body .bottom .content .qrcode img{
+      display: block;
+      width: 139px;
+      margin:0 auto;
+    }
+    .mask {
+      position: absolute;
+      top: 0;
+      background:rgba(0,0,0,0.702);
+      width: 100%;
+      height: 100%;
+     }
+    .mobile {
+      display: none;
+     }
+
+    .mask, .dialog {
+      display: none;
+    } 
+      .video {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        top: 0;
+      }
+      .video .button {
+        margin: 0 auto;
+        margin-top: 20%;
+        width: 282px;
+        height: 175px;
+        padding: 0px;
+        border:2px white solid;
+        border-radius: 0;
+        position: -2px -2px;
+        background-image: url("../images/video_bg.png");
+      }
+      .video .button img {
+        display: block;
+        padding: 2px;
+      }
+      .video .button .ball {
+        margin: 0 auto;
+      }
+      .video .button .ball img {
+        margin: 0 auto;
+        margin-top: -150px;
+        width:100px;
+        height: 100px;
+        animation:ball 3s infinite linear;
+        -moz-animation:ball 3s infinite linear; /* Firefox */
+        -webkit-animation:ball 3s infinite linear; /* Safari and Chrome */
+        -o-animation:ball 3s infinite linear; /* Opera */
+      }
+       .dialog.video {
+        position: absolute;
+        width: 60%;
+        left: 20%;
+        top: 10%;
+        height: auto;
+      }
+       .dialog.video video {
+        max-width: 100%;
+      }
+
+      @keyframes ball
+      {
+      from {width:30px; height: 30px;}
+      to {width:130px;height:130px;}
+      }
+
+      @-moz-keyframes ball /* Firefox */
+      {
+      from {width:30px;height: 30px;}
+      to {width:130px;height:130px;}
+      }
+
+      @-webkit-keyframes ball /* Safari and Chrome */
+      {
+      from {width:30px;height: 30px;}
+      to {width:130px;height:130px;}
+      }
+
+      @-o-keyframes ball /* Opera */
+      {
+      from {width:30px;height: 30px;}
+      to {width:130px;height:130px;}
+      }
+
+@media (max-width: 1520px) {
+    .main-body .bottom .content .brief .detail {
+        width: 300px;
+        font-size: 0.075rem;
+    }
+    .main-body .bottom .content .line.vertical {
+      margin-right: 10px;
+    } 
+    .main-body .bottom .content .share {
+      font-size: 0.075rem;
+    }
+    .main-body .bottom .content .share div div{
+      padding-top: 4px;      
+    }
+    .main-body .bottom .content .download {
+      font-size: 0.075rem;
+    }
+    .main-body .bottom .content .qrcode img{
+      width: 80px;
+      height: 80px; 
+    }
+}
+@media (max-width: 1200px) {
+    
+    .main-body .bottom .content .download {
+      font-size: 0.075rem;
+    }
+    .main-body .bottom .content .qrcode img{
+      width: 80px;
+      height: 80px;
+    }
+
+}
+@media (max-width: 1000px) {
+    i {
+      font-style: normal;
+    }
+    .pc {
+      display: none;
+    }
+    .mobile {
+      display: block;
+    }
+     .bottom {
+        background:rgba(28,45,78,0.7);
+        width: 100%;
+        position: fixed;
+        height: 9%;
+        bottom: 0px;
+        left: 0px;
+      }
+     .bottom .line {
+        width: 100%;
+        height: 2px;
+        background: #142545;
+      }
+      .bottom .menus {
+        line-height: 1;
+        height: calc(100% - 2px);
+      }
+      .bottom .menus .menu {
+        border-right: 2px solid #142545;
+        height: 100%;
+        text-align: center;
+        font-size: 12px;
+        color: rgb(255, 255, 255);
+        line-height: 1.6;
+      }
+       .bottom .menus .menu:last-child {
+         border-right:none;
+       }
+
+       .bottom .menus .menu img {
+        display: block;
+        margin:0 auto;
+        font-size: 10px;
+        height: 48%;
+        text-align: center;
+        margin-top: 10%;
+       }
+       
+      .dialog {
+        width: 87.5%;
+        top: 30%;
+        left: 6.25%;
+        border-radius: 15px;
+        background-color: rgba(255, 255, 255, 0.8);
+        border: 3px  rgba(100, 100, 100, 0.56) solid;
+        height: auto;
+       }
+       .dialog .cancel  {
+        float: right;
+        right: 0px;
+        width: 30px;
+        height: 30px;
+        border: 2px  rgba(255, 255, 255, 0.8) solid;
+        border-radius: 25px;
+        margin-top: -15px;
+        margin-right: -15px;
+       }
+       .dialog .cancel  .circle {
+        width: 26px;
+        height: 26px;
+        border-radius: 23px;
+        background: red;
+        text-align: center;
+        line-height: 25px;
+       }
+       .dialog .cancel b {
+         display:inline-block; 
+         width:20px;
+         height:3px;
+         background:white;
+         font-size:0;
+         line-height:0;
+         vertical-align:middle;
+         -webkit-transform: rotate(45deg);
+      }
+      .dialog .cancel b:after { 
+        content:'.';
+        display:block;
+        width:20px;
+        height:3px;
+        background:white;
+        -webkit-transform: rotate(-90deg);
+     }
+
+     .dialog.brief .detail .title {
+      color: white;
+     }
+     .dialog.brief .detail .title i {
+      position: absolute;
+      display: inline-block;
+      margin-top:-30px;
+      width: 2px;
+      height: 21px;
+      background: rgb(0, 55, 122);
+      margin-left: 10px;
+     }
+
+     .dialog.brief .detail .title div {
+      position: absolute;
+      display: inline-block;
+      color: rgb(0, 55, 122);
+      margin-left: 15px;
+      margin-top: -34px;
+      font-size: 22px;
+      font-weight: bold;
+      line-height: 1.5;
+     }
+     .dialog.brief .detail .text {
+      margin-top: 60px;
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-bottom: 20px;
+      font-size: 20px;
+     }
+     .dialog.qq  .detail {
+      text-align: center;
+      margin: 50px auto;
+     }
+     .dialog.qq  img {
+      display: inline-block;
+       width: 30px;
+       padding-bottom: 15px;
+     }
+     .dialog.qq   .detail i {
+      font-size: 18px;
+      font-family: "Adobe Heiti Std";
+      color: rgb(102, 102, 102);
+     } 
+     .dialog.enter  {
+      line-height: 2;
+      font-size: 14px;
+      font-family: "MicrosoftYaHei";
+     }
+     .dialog.enter  .detail {
+      padding: 50px 0;
+      text-align: center;
+     }
+     .dialog.enter  .detail img {
+      display: block;
+      margin: 0 auto;
+      width: 35.4%;
+     }
+     .dialog.enter  .detail p {
+      color: rgb(51, 51, 51);
+      padding: 0;
+     }
+
+     .dialog.enter  .detail i {
+      display: block;
+      color: rgb(102, 102, 102);
+      margin-top: -10px;
+     }
+    .dialog.brief  .detail .text{
+      font-size: 15px;
+    }
+}
+

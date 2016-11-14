@@ -1,0 +1,1589 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'SegoeWP';
+    font-weight: normal;
+    src: url('../../assets/fonts/segoe/SegoeWP.ttf');
+}
+
+@font-face {
+    font-family: 'SegoeWPN';
+    font-weight: normal;
+    src: url('../../assets/fonts/segoe/SegoeWPN.ttf');
+}
+
+@font-face {
+    font-family: 'SegoeWP-Bold';
+    font-weight: normal;
+    src: url('../../assets/fonts/segoe/SegoeWP-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'SegoeWPN-Bold';
+    font-weight: normal;
+    src: url('../../assets/fonts/segoe/SegoeWPN-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'DroidSansFallback';
+    font-weight: normal;
+    src: url('../../assets/fonts/segoe/DroidSansFallback.ttf');
+}
+
+@font-face {
+    font-family: 'Aileron Regular';
+    font-weight: normal;
+    src: url('../../assets/fonts/aileron/Aileron-Regular.otf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+html {
+    height: 100%;
+    -webkit-text-size-adjust: none;
+    outline: 0;
+}
+
+body {
+    height: 100%;
+    color: #666;
+    font-family: 'SegoeWP', 'SegoeWPN', 'SegoeWPN-Bold', 'DroidSansFallback', 'Aileron Regular', 'STHeiti', 'simhei', 'Open Sans', Arial, 'Hiragino Sans GB', 'Microsoft YaHei', 微软雅黑,
+    'WenQuanYi Micro Hei', SimSun, sans-serif;
+    background: none;
+    overflow-x: hidden;
+}
+
+ul, li {
+    list-style-type: none;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+@media (min-width: 1600px) {
+    .container {
+        width: 1500px;
+        max-width: 1920px;
+    }
+    .footer_bottom_line{
+        width:calc(100% - 165px)!important;
+    }
+}
+
+.nav-bar_background {
+    height: 0.625rem;
+    z-index: 999;
+    background: -webkit-linear-gradient(left, #111111, #333333); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, #111111, #333333); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, #111111, #333333); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, #111111, #333333); /* 标准的语法 */
+    /*-moz-box-shadow: 0 0 100px 50px; !* 老的 Firefox *!*/
+    /*box-shadow: 0 0 100px 50px;*/
+}
+
+#nav-bar a {
+    text-decoration: none;
+}
+
+.nav_bar_menu {
+    padding-left: 0.09375rem;
+    line-height: 0.625rem;
+    color: whitesmoke;
+    font-size: 0.125rem;
+    font-family: SegoeWP;
+}
+
+.nav-bar_shadow {
+    position: absolute;
+    width: 100%;
+    opacity: 0.5;
+    top: 0px;
+    height: 0.625rem;
+    z-index: 998;
+    background: -webkit-linear-gradient(left, #111111, #333333); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, #111111, #333333); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, #111111, #333333); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, #111111, #333333); /* 标准的语法 */
+    -moz-box-shadow: 0 0.375rem 0.25rem #111111; /* 老的 Firefox */
+    box-shadow: 0 0.375rem 0.25rem #111111;
+}
+
+.submenus {
+    position: absolute;
+    left: 0;
+    top: 0.125rem;
+    width: 100%;
+}
+
+.submenus a {
+    color: white;
+    text-decoration: none;
+    -webkit-transform: scale(0.75);
+    -o-transform: scale(0.75);
+    -moz-transform: scale(0.75);
+    -ms-transform: scale(0.75);
+    transform: scale(0.75);
+}
+
+.menu_content {
+    position: absolute;
+    top: 0.125rem;
+    left: 0;
+    width: 100%;
+}
+
+.submenu {
+    margin-left: 1px;
+    line-height: 25px;
+    width: 100%;
+    padding-left: 0.09375rem;
+    margin-top: 0.01875rem;
+    color: white;
+    font-size: 0.09375rem;
+    font-family: SegoeWP;
+    z-index: 999;
+}
+
+.submenu_normal {
+    background: -webkit-linear-gradient(left, #391211, #931a1d); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, #391211, #931a1d); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, #391211, #931a1d); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, #391211, #931a1d); /* 标准的语法 */
+}
+
+.submenu_active {
+    background: -webkit-linear-gradient(left, #391211, #931a1d); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, #391211, #931a1d); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, #391211, #931a1d); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, #391211, #931a1d); /* 标准的语法 */
+}
+
+.submenu a {
+    color: white;
+    text-decoration: none;
+    -webkit-transform: scale(0.75);
+    -o-transform: scale(0.75);
+    -moz-transform: scale(0.75);
+    -ms-transform: scale(0.75);
+    transform: scale(0.75);
+}
+
+.submenu_more {
+    float: right;
+    line-height: 25px;
+    padding-right: 3px;
+    color: white;
+}
+
+.main_menus {
+    position: absolute;
+    width: 100%;
+    top: 100px;
+    font-size: 0.109375rem;
+}
+
+#header_main_img {
+    position: relative;
+    background: url('../../assets/images/login/background.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    height: 500px;
+}
+
+#header_main_img_every {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+#header_main_img_every .every {
+    font-size: 30px;
+    font-family: "SegoeWPN-Bold";
+    margin-bottom: 0;
+}
+
+#header_main_img_every .customize {
+    margin-top: 0px;
+    font-size: 20px;
+    font-family: "SegoeWPN";
+}
+
+.submenus_background {
+    position: relative;
+    opacity: 0.6;
+    border-bottom: 1px solid #241f20;
+    background: -webkit-linear-gradient(#111111, #444444); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#111111, #444444); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(#111111, #444444); /* Firefox 3.6 - 15 */
+    background: linear-gradient(#111111, #444444); /* 标准的语法 */
+}
+
+.submenus_background .border_split {
+    position: absolute;
+    right: -2px;
+    z-index: 999;
+    width: 1px;
+    height: 1.875rem;
+    background-color: #111111;
+    float: right;
+}
+
+.submenus_background .border_y_left {
+    position: absolute;
+    left: 0;
+    float: left;
+
+    background-color: yellow;
+    width: 1px;
+    height: 1.5625rem;
+    background: -webkit-linear-gradient(#b62626, #241f20); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#b62626, #241f20); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(#b62626, #241f20); /* Firefox 3.6 - 15 */
+    background: linear-gradient(#b62626, #241f20); /* 标准的语法 */
+}
+
+.submenus_background .border_y_right {
+    position: absolute;
+    right: 0;
+    z-index: 999;
+    width: 1px;
+    height: 1.5625rem;
+    background-color: yellow;
+    float: right;
+    background: -webkit-linear-gradient(#b62626, #241f20); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#b62626, #241f20); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(#b62626, #241f20); /* Firefox 3.6 - 15 */
+    background: linear-gradient(#b62626, #241f20); /* 标准的语法 */
+}
+
+.sub3style {
+    color: white;
+    font-weight: bold;
+    font-size: 0.09275rem;
+    padding-left: 0.15625rem;
+    padding-top: 0.03125rem;
+
+}
+
+.sub3style:first-child {
+    padding-top: 0;
+}
+
+.sub4style {
+    color: white;
+    font-size: 0.09275rem;
+    padding-left: 0.15625rem;
+    padding-top: 0.03125rem;
+
+}
+
+.sub4style:first-child {
+    padding-top: 0;
+}
+
+.menu_brief {
+    color: white;
+    text-align: center;
+}
+
+.menu_brief_button {
+    display: inline-block;
+    margin-top: 0.40625rem;
+    color: white;
+    width: 1.25rem;
+    height: 0.15625rem;
+    line-height: 0.125rem;
+    border: 1px solid rgba(265, 265, 265, 0.5);
+    border-radius: 2px;
+    text-align: center;
+    text-decoration: none !important;
+    font-size: 15px;
+    /*font-family: 'SegoeWP';*/
+}
+
+a.menu_brief_button:hover, a.menu_brief_button:focus {
+    color: #fff;
+    opacity: 0.5;
+}
+
+.menu_brief_title1 {
+    font-family: "SegoeWP-Bold";
+    font-size: 0.21875rem;
+}
+
+.menu_brief_title1_long {
+    font-family: "SegoeWP-Bold";
+    font-size: 0.21875rem;
+    word-spacing: 0px;
+    letter-spacing: -1px;
+}
+
+.menu_brief_title2 {
+    font-family: SegoeWP;
+    margin-top: 10px;
+    font-size: 0.09375rem;
+}
+
+.menu_brief_title3 {
+    margin-top: 10px;
+    font-size: 0.09375rem;
+    font-family: SegoeWP;
+
+    /*-webkit-transform: scale(0.75);*/
+    /*-o-transform: scale(0.75);*/
+    /*-moz-transform: scale(0.75);*/
+    /*-ms-transform: scale(0.75);*/
+    /*transform: scale(0.75);*/
+}
+
+.user_operation {
+    line-height: 0.625rem;
+    color: white;
+    font-family: "SegoeWPN";
+}
+
+.user_operation div ul li {
+    font-size: 0.125rem;
+    padding-right: 0;
+
+}
+
+.user_operation div ul li a {
+    font-size: 0.125rem;
+    float: right;
+    padding-right: 0;
+    text-decoration: none;
+    color: white;
+}
+
+.logo-wrap {
+    line-height: 0.625rem;
+}
+
+.nav-bar-logo {
+    display: inline-block;
+    width: 100%;
+    line-height: 0.625rem;
+    text-align: left;
+}
+
+.nav-bar-logo img {
+    height: 20px;
+    margin-left: -15px;
+
+}
+
+.nav-bar-logo div {
+    width: 30px;
+    height: 30px;
+    margin-top: -30px;
+    margin-left: -15px;
+    opacity: 0;
+}
+.shopping-cart {
+    position: relative;
+}
+.shopping-cart-img {
+    height: 50px;
+}
+
+.cart_count_wrap {
+    position: relative;
+    line-height: 0.625rem;
+    float: right;
+}
+
+.cart_count {
+    position: absolute;
+    top: 0.4rem;
+    left: 0.0625rem;
+
+}
+
+.cart_count div {
+    width: 30px;
+    height: 30px;
+
+    line-height: 25px;
+    text-align: center;
+    background: white;
+    border: 0.0125rem solid black;
+    border-radius: 50px;
+    font-size: 20px;
+    font-family: "SegoeWP";
+    font-weight: bold;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    color: black;
+}
+
+.navbar-submenu-background {
+    position: absolute;
+    top: 100px;
+    background-color: #2b2b2b;
+    z-index: 888;
+    width: 100%;
+}
+
+.header-img {
+    width: 100%;
+}
+
+#header_main_img_every {
+
+}
+
+.header-search-shadow {
+    margin-top: -1px;
+    height: 0.625rem;
+    font-family: "SegoeWPN";
+    background: -webkit-linear-gradient(left, #000000, #333333); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, #000000, #333333); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, #000000, #333333); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, #000000, #333333); /* 标准的语法 */
+}
+
+.header-search-input {
+    position: relative;
+    margin-top: 0.125rem;
+    width: 100%;
+    height: 0.5rem;
+}
+
+.header-search-input input {
+    padding-left: 15px;
+    padding-right: 0.3125rem;
+    color: #ffffff;
+    border: 0;
+    background: #636363;
+    height: 0.375rem;
+    width: 100%;
+    font-size: 20px;
+    font-family: SegoeWPN;
+}
+.header-search-input input:focus{
+    outline:none;
+}
+
+.header-search-icon {
+    position: absolute;
+    top: 0px;
+    right: 25px;
+    color: white;
+    line-height: 0.375rem;
+    font-size: 0.1375rem;
+}
+
+.triangle_body {
+    position: absolute;
+    opacity: 0.78;
+    top: 0.55rem;
+
+    position: absolute;
+    top: -15px;
+    height: 15px;
+    width: 100%;
+    border-bottom: 1px #b9272c solid;
+    left: 0;
+}
+
+.triangle_body .out {
+    position: absolute;
+    top: 1px;
+    left: 0.09375rem;
+    border-color: transparent transparent #b9272c #b9272c;
+    border-style: solid solid solid solid;
+
+    /* 設定邊框大小可拼湊出任意形狀的三角形 */
+    border-width: 0 22px 14px 0;
+
+    /* 設定 width、height 可更好理解原理 */
+    height: 0;
+    width: 0;
+}
+
+.triangle_body .in {
+    position: absolute;
+    top: 2.3333px;
+    left: 1px;
+    border-color: transparent transparent #202020 #202020;
+    border-style: solid solid solid solid;
+
+    /* 設定邊框大小可拼湊出任意形狀的三角形 */
+    border-width: 0 22px 14px 0;
+
+    /* 設定 width、height 可更好理解原理 */
+    height: 0;
+    width: 0;
+
+}
+
+ @media (max-width: 1600px) {
+    .menu_brief_title1 {
+        font-size: 0.15625rem;
+    }
+
+    .menu_brief_title1_long {
+        font-size: 0.15625rem;
+    }
+
+    .menu_brief_title2 {
+        font-size: 0.075rem;
+    }
+
+    .menu_brief_title3 {
+        font-size: 0.075rem;
+    }
+
+    .menu_brief_button {
+        font-size: 0.075rem;
+    }
+
+    .sub3style {
+        font-size: 0.075rem;
+
+    }
+
+    .sub4style {
+        font-size: 0.075rem;
+    }
+
+    .submenu {
+        font-size: 0.075rem;
+        height: 20px;
+        line-height: 20px;
+
+    }
+
+    .submenu_more {
+        line-height: 20px;
+    }
+
+    .user_operation div ul li {
+        font-size: 0.09375rem;
+    }
+
+    #header_main_img_every .every {
+        font-size: 25px;
+        font-family: "SegoeWPN-Bold";
+        margin-bottom: 0;
+    }
+
+    #header_main_img_every .customize {
+        margin-top: -2px;
+        font-size: 16px;
+        font-family: "SegoeWPN";
+    }
+}
+
+@media (max-width: 1300px) {
+    .nav_bar_menu {
+        font-size: 0.1rem;
+    }
+
+    .user_operation div ul li {
+        font-size: 0.1rem;
+
+    }
+
+    .user_operation div ul li a {
+        font-size: 0.1rem;
+        float: right;
+    }
+
+    .shopping-car {
+        height: 40px;
+    }
+
+
+    .cart_count_wrap {
+        position: relative;
+        line-height: 0.625rem;
+        float: right;
+    }
+    .shopping-cart-img {
+        height: 40px;
+    }
+    .cart_count {
+        position: absolute;
+        top: 0.4rem;
+        left: 0.0625rem;
+
+    }
+
+    .cart_count div {
+        width: 20px;
+        height: 20px;
+        line-height: 16px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 992px) {
+    .nav-bar-logo {
+        width: 100%;
+        text-align: center;
+        line-height: 0.625rem;
+    }
+
+    .nav-bar-logo img {
+        display: inline-block;
+        margin-left: 0;
+    }
+
+    .nav-bar-logo div {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        margin-top: -30px;
+        margin-left: -15px;
+        opacity: 0;
+    }
+
+    .shopping-cart-count {
+        display: inline-block;
+        float: right;
+    }
+
+    #header_main_img_every .every {
+        font-size: 18px;
+        font-family: "SegoeWPN-Bold";
+        margin-bottom: 0;
+    }
+
+    #header_main_img_every .customize {
+        margin-top: -5px;
+        font-size: 12px;
+        font-family: "SegoeWPN";
+    }
+
+    .header-search-input input {
+        font-size: 12px;
+    }
+}
+
+#footer {
+    height: 3.28125rem;
+    width: 100%;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+}
+
+.subbar_bg {
+    height: 0.625rem;
+    /*margin-bottom: -2.8125rem;*/
+    background-color: #b2b2b2;
+}
+
+.footer_content {
+    width: 100%;
+    height: 2.0625rem;
+    margin-top: -3.4375rem;
+}
+
+.subbar {
+    height: 0.625rem;
+    line-height: 0.625rem;
+}
+
+.subbar_text {
+    color: white;
+    font-size: 0.15625rem;
+    font-family: "SegoeWPN";
+    text-align: center;
+}
+
+.subbar_input {
+    margin-top: 0.125rem;
+    margin-bottom: 0.125rem;
+    color: white;
+    border: 0;
+    height: 0.375rem;
+    width: 102%;
+    padding-left: 15px;
+    line-height: 0.375rem;
+    background: #c9c9c9;
+    font-size: 0.125rem;
+    font-family: "SegoeWPN";
+}
+
+.subbar_input:focus {
+    outline: none;
+}
+
+.subbar_button {
+    margin-top: 0.125rem;
+    margin-bottom: 0.125rem;
+    width: 1.075rem;
+    /*padding-left: 20px;*/
+    height: 0.375rem;
+    text-align: center;
+    line-height: 0.375rem;
+    color: white;
+    border: 1px #7c7c7c solid;
+    background-color: #c9c9c9;
+}
+
+.subbar_button:hover {
+    /*opacity: 0.9;*/
+    background-color: #A4A4A4;
+}
+
+.subbar_button a {
+    text-decoration: none !important;
+    color: white;
+    font-size: 0.125rem;
+    font-family: "SegoeWPN";
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    color: white;
+}
+
+input:-moz-placeholder, textarea:-moz-placeholder {
+    color: white;
+}
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+    color: white;
+}
+
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+    color: white;
+}
+
+.footer_bg {
+    width: 100%;
+    height: 2.8125rem;
+    margin-bottom: 0;
+    background: -webkit-linear-gradient(left, #111111, #333333); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, #111111, #333333); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, #111111, #333333); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, #111111, #333333); /* 标准的语法 */
+}
+
+.footer_menus {
+    margin-top: 0.4375rem;
+    font-size: 0.10625rem;
+    color: white;
+}
+
+.footer_menus_logo {
+    padding-left: 0px;
+}
+
+.footer_menus_logo img {
+    width: 200px;
+    height: auto;
+}
+
+.footer_menus_col {
+    float: right;
+}
+
+.footer_menus_menus {
+}
+
+.footer_menus_menus_first {
+    height: 0.375rem;
+    font-weight: bold;
+    font-size: 17px;
+    font-family: "SegoeWPN";
+}
+
+.footer_menus_menus_second {
+}
+
+.footer_menus_job {
+    color: #8c8c8c;
+}
+
+.footer_menus_flollow_sub {
+    color: #8c8c8c;
+    text-align: left;
+    /*padding-left: 125px;*/
+}
+
+.footer_menus_follow {
+}
+
+#footer_follow {
+    /*text-align: ;*/
+
+    /*padding-left: 20px;*/
+    float: right;
+}
+
+.footer_bottom {
+    height: 0.5rem;
+    color: white;
+    line-height: 30px;
+    margin-top: 0.125rem;
+}
+
+.footer_bottom_left {
+    display: inline;
+    font-family: SegoeWP;
+    font-size: 18px;
+}
+
+.footer_bottom_left div {
+    display: inline;
+}
+
+.footer_bootom_right {
+    display: inline;
+    float: right;
+    font-size: 0.09375rem;
+    color: white;
+}
+
+.footer_bottom_2015 {
+    display: inline;
+    float: right;
+    margin-right: 40px;
+    height: 15px;
+    color: white;
+    font-size: 14px;
+    font-family: SegoeWP;
+}
+
+.footer_bottom_icp {
+    display: inline;
+    float: right;
+    height: 15px;
+    color: white;
+    font-family: "DroidSansFallback";
+    font-size: 14px;
+}
+
+.footer_bottom_line {
+    display: inline-block;
+    margin-top: 0.125rem;
+    width: 85%;
+    z-index: 7;
+    border-top: 1px #8d8d8d solid;
+    color: white;
+}
+
+.footer_bottom_cny_cn {
+    display: inline-block;
+    float: right;
+    font-family: "Aileron Regular";
+    padding-top: 5px;
+}
+
+.footer_menus_bottom {
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    color: white;
+    background: -webkit-linear-gradient(left, #111111, #333333); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, #111111, #333333); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, #111111, #333333); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, #111111, #333333); /* 标准的语法 */
+}
+
+/** 覆盖bootstrap中的样式**/
+
+.btn {
+    width: 72px;
+    height: 30px;
+    line-height: 30px;
+    padding: 0;
+    color: white;
+    background-color: #333333;
+    border-radius: 2px;
+    font-family: "Aileron Regular";
+    font-size: 18px;
+}
+
+.dropdown-menu {
+    min-width: 72px;
+    width: 72px;
+    background-color: #808080;
+    border-radius: 0 0 1px 1px;
+    border: 1px solid #8c8c8c;
+    font-family: "Aileron Regular";
+    font-size: 18px;
+    padding: 0px!important;
+
+}
+
+.dropdown-menu > li > a {
+    padding-left: 15px;
+    color: white;
+    font-family: "Aileron Regular";
+
+}
+
+.open > .dropdown-menu {
+    width: 72px;
+    border-radius: 0 0 2px 2px;
+    margin-top: -2px;
+    font-family: "Aileron Regular";
+    font-size: 18px;
+    /*border-bottom: ;*/
+}
+
+.btn-default:active:hover, .btn-default.active:hover, .open > .dropdown-toggle.btn-default:hover, .btn-default:active:focus, .btn-default.active:focus, .open > .dropdown-toggle.btn-default:focus, .btn-default:active.focus, .btn-default.active.focus, .open > .dropdown-toggle.btn-default.focus {
+
+    color: white;
+    background-color: #808080;
+    border-color: #8c8c8c;
+    font-family: "Aileron Regular";
+
+}
+
+.btn-group > .btn:hover, .btn-group-vertical > .btn:hover, .btn-group > .btn:focus, .btn-group-vertical > .btn:focus, .btn-group > .btn:active, .btn-group-vertical > .btn:active, .btn-group > .btn.active, .btn-group-vertical > .btn.active {
+    z-index: 2;
+    background: #808080;
+    font-family: "Aileron Regular";
+
+}
+
+.btn .caret {
+    float: right;
+    margin-top: 13px;
+    margin-right: 5px;
+}
+
+.btn-group > .btn:first-child {
+    font-family: "Aileron Regular";
+}
+
+@media (max-width: 1600px) {
+
+    .subbar_text {
+        font-size: 0.125rem;
+    }
+
+    .footer_bottom_text {
+        font-size: 0.09375rem;
+    }
+
+    .footer_bottom_2015 {
+
+        font-size: 0.075rem;
+    }
+
+    .footer_menus {
+        font-size: 0.08125rem;
+    }
+
+    .footer_menus_flollow_sub {
+        /*padding-left: 70px;*/
+    }
+}
+
+@media (max-width: 1200px) {
+
+    .btn {
+        width: 60px;
+        font-size: 12px;
+    }
+
+    /** 覆盖bootstrap中的样式**/
+    .open > .dropdown-menu {
+        width: 60px;
+        font-size: 12px;
+    }
+
+    .btn-default:active:hover, .btn-default.active:hover,
+    .open > .dropdown-toggle.btn-default:hover, .btn-default:active:focus,
+    .btn-default.active:focus, .open > .dropdown-toggle.btn-default:focus,
+    .btn-default:active.focus, .btn-default.active.focus, .open > .dropdown-toggle.btn-default.focus {
+
+    }
+
+    .dropdown-menu {
+        min-width: 60px;
+        width: 60px;
+        padding: 0;
+        font-size: 12px;
+
+    }
+
+    .dropdown-menu > li > a {
+        padding-left: 8px;
+    }
+
+    .footer_menus_flollow_sub {
+        /*padding-left: 50px;*/
+    }
+
+    .footer_bottom_left {
+        font-size: 16px;
+    }
+
+    .footer_bottom_2015 {
+        font-size: 12px;
+        margin-right: 20px;
+    }
+
+    .footer_bottom_icp {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 992px) {
+    .subbar_bg {
+        height: auto;
+        font-family: "SegoeWPN";
+        padding-bottom: 10px;
+        background: -webkit-linear-gradient(left, #111111, #333333); /* Safari 5.1 - 6.0 */
+        background: -o-linear-gradient(right, #111111, #333333); /* Opera 11.1 - 12.0 */
+        background: -moz-linear-gradient(right, #111111, #333333); /* Firefox 3.6 - 15 */
+        background: linear-gradient(to right, #111111, #333333); /* 标准的语法 */
+    }
+
+    .subbar_input {
+        width: 100%;
+    }
+
+    .subbar_button {
+        color: white;
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .subbar_text {
+        width: 100%;
+        font-size: 0.125rem;
+        color: white;
+    }
+
+    .footer_bottom_line {
+        margin-top: auto;
+        width: 100%;
+    }
+
+    .footer_bottom_left {
+        display: block;
+        color: white;
+        width: 100%;
+        font-size: 12px;
+    }
+
+    .footer_bottom_2015 {
+        float: none;
+        margin-left: auto;
+        font-size: 0.0625rem;
+        -webkit-transform: scale(0.75);
+        -o-transform: scale(0.75);
+        -moz-transform: scale(0.75);
+        -ms-transform: scale(0.75);
+        transform: scale(0.75);
+    }
+
+    .footer_bottom_icp {
+        float: none;
+        margin-left: auto;
+        font-size: 0.0625rem;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        -webkit-transform: scale(0.75);
+        -o-transform: scale(0.75);
+        -moz-transform: scale(0.75);
+        -ms-transform: scale(0.75);
+        transform: scale(0.75);
+    }
+
+
+    .footer_bottom_cny_cn {
+        margin-left: 0;
+    }
+
+    .btn {
+        width: 50px;
+        height: 20px;
+        font-size: 12px;
+
+    }
+
+    /** 覆盖bootstrap中的样式**/
+    .open > .dropdown-menu {
+        width: 50px;
+        font-size: 12px;
+
+    }
+
+    .btn-default:active:hover, .btn-default.active:hover, .open > .dropdown-toggle.btn-default:hover, .btn-default:active:focus, .btn-default.active:focus, .open > .dropdown-toggle.btn-default:focus, .btn-default:active.focus, .btn-default.active.focus, .open > .dropdown-toggle.btn-default.focus {
+
+    }
+
+    .btn-group > .btn, .btn-group-vertical > .btn {
+        line-height: 18px;
+    }
+
+    .btn .caret {
+        float: right;
+        margin-top: 8px;
+        margin-right: 5px;
+    }
+
+    .dropdown-menu {
+        min-width: 50px;
+        width: 50px;
+    }
+
+    .dropdown-menu > li > a {
+        height: 20px;
+        padding-left: 5px;
+    }
+}
+
+@media all and (min-width:992px){
+    #footer_menus.row{
+        margin-right:-65px;
+    }
+    #footer_follow{
+        margin-right:-15px;
+    }
+}
+@media all and (max-width:992px) {
+}
+
+#cart_label_detail {
+    opacity: 1;
+    line-height: normal;
+}
+
+.cart_label_detail_triangle {
+    position: absolute;
+    right: 0;
+    border-color: transparent  rgba(0, 0, 0, 0.502)  rgba(0, 0, 0, 0.502) transparent;
+    border-style: solid solid solid solid;
+    border-width: 40px 39px 0 0;
+    height: 0;
+    width: 0;
+
+}
+.cart_label {
+    position: absolute;
+    right:30%;
+    top: 0.625rem;
+    color: white;
+}
+.cart_label_bg {
+    margin-top: 40px;
+    padding-bottom: 20px;
+    width: 421px;
+    background-color: rgba(0, 0, 0, 0.502);
+}
+.cart_label_line {
+    height: 1px;
+    opacity: 0.302;
+    background-color: white;
+    margin-right: 0;
+    margin-left: 0;
+}
+.cart_label_row {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.cart_label_row_line {
+    margin-left: 0;
+    margin-right: 0;
+}
+.cart_label_row_total {
+    height: 49px;
+    line-height: 49px;
+}
+.cart_label_row_prods {
+    padding-top: 45px;
+    padding-bottom: 25px;
+}
+.cart_label_row_check {
+    padding-top: 18px;
+}
+.cart_label_count .span{
+}
+.cart_label_count_total {
+    font-family: SegoeWPN-Bold;
+    font-size: 15px;
+}
+.cart_label_count_total_x {
+    font-family: SegoeWPN;
+    font-size: 15px;
+}
+.cart_label_prods_empty {
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 18px;
+    font-family: SegoeWPN-Bold;
+}
+.cart_label_prods_item {
+    margin-bottom: 20px;
+}
+.cart_label_count_item {
+    font-family: SegoeWPN;
+    font-size: 15px;
+}
+
+.cart_label_content {
+    padding-right: 25px;
+    padding-left: 25px;
+}
+.cart_label_content_total_name {
+    font-family: SegoeWPN;
+    font-size: 15px;
+}
+.cart_label_content_item_name {
+    font-family: SegoeWPN-Bold;
+    font-size: 15px;
+    height: 20px;
+}
+.cart_label_content_item_material {
+    font-family: SegoeWPN;
+    font-size: 13px;
+    height: 20px;
+}
+
+.cart_label_operation {
+}
+.cart_label_operation_delete {
+}
+.cart_label_operation_delete .glyphicon{
+    font-size: 20px;
+    display:inline-block;
+    line-height:49px;
+}
+
+.cart_label_operation_total {
+    width: 16px;
+    height: 16px;
+}
+.cart_label_operation_item_delete {
+    float: right;
+    width: 16px;
+    height: 16px;
+    border: 1px  white solid;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 15px;
+    font-size: 12px;
+    font-family: "SegoeWP-Bold";
+    background: -webkit-linear-gradient(left, #391211, #931a1d); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, #391211, #931a1d); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, #391211, #931a1d); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, #391211, #931a1d); /* 标准的语法 */
+
+}
+.cart_label_subtotal {
+    margin-bottom: 9px;
+}
+.cart_label_btn {
+    width: 231px;
+    height: 31px;
+    padding-left: 1px;
+    padding-top: 1px;
+    background-color: #b0a4a4;
+    border-radius: 1px;
+}
+
+.cart_label_btn_bg {
+
+    color: white;
+    width: 229px;
+    height: 29px;
+    font-size: 15px;
+    font-family: SegoeWPN-Bold;
+    text-align: center;
+    line-height: 29px;
+    background: -webkit-linear-gradient(left, #391211, #931a1d); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, #391211, #931a1d); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, #391211, #931a1d); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, #391211, #931a1d); /* 标准的语法 */
+}
+.cart_label_btn_bg:hover {
+    background: #931a1d;
+}
+
+@media (min-width: 1200px) {
+    #shopping_cart_container {
+        width: 1130px;
+        max-width: 1130px;
+    }
+}
+
+.design_line {
+    height: 1px;
+    background-color: #000000;
+    opacity: 0.3;
+}
+.design_title {
+    font-family: SegoeWPN-Bold;
+    font-size: 35px;
+    color: #000000;
+
+}
+.design_by {
+    padding-left: 5px;
+    font-family: SegoeWPN;
+    font-size: 0.09375rem;
+    color: #000000;
+
+}
+.design_by_name {
+    font-family: SegoeWPN;
+    font-size: 0.09375rem;
+    color:#b4272d;
+}
+.design_title_bottom_line {
+    margin-top: 15px;
+}
+.design_category {
+    margin-top: 45px;
+    font-size: 0.125rem;
+    font-family: "SegoeWPN";
+    font-weight: bold;
+    color: rgb(0,0,0);
+    padding-left: 0;
+}
+.design_favor {
+    position: relative;
+    padding-top: 25px;
+    padding-left: 0;
+}
+.design_favor div span {
+    line-height: 25px;
+}
+.design_favor_icon_wrap {
+    display: inline-block;
+}
+.design_favor_add {
+    position: relative;
+}
+.design_favor_like {
+    position: relative;
+}
+.design_favor_add_text {
+    position: absolute;
+    left:40px;
+    top: -2px;
+    font-size: 0.09375rem;
+    font-family: "SegoeWPN";
+    color: rgb(0, 0, 0);
+}
+.design_favor_like_text {
+    position: absolute;
+    left:40px;
+    top: 0px;
+    font-size: 0.09375rem;
+    font-family: "SegoeWPN";
+    color: rgb(0, 0, 0);
+}
+.i-heart,
+.i-thumb {
+    background: url("../images/design_detail/heart_thumb.png?v=11") no-repeat;
+    background-size: 23px 55px;
+    width: 25px;
+    height: 25px;
+}
+.i-heart {
+    display: block;
+}
+.i-thumb {
+    display: block;
+
+    background-position: 0 -30px;
+
+}
+.design_favor_bottom_line {
+    margin-top: 29px;
+}
+.design_overview {
+    padding-left: 0px;
+    padding-top: 15px;
+    color: #000000;
+}
+.design_overview_title {
+    font-family: SegoeWPN-Bold;
+    font-size: 0.09375rem;
+}
+.design_overview_content {
+    margin-top: 10px;
+    font-family: SegoeWPN;
+    font-size: 0.08125rem;
+}
+.design_favor_overview_line {
+    margin-top: 9px;
+}
+.design_choose {
+    padding-top: 16px;
+    padding-left: 0;
+}
+.design_choose_title {
+    font-family: SegoeWPN-Bold;
+    font-size: 0.08125rem;
+    color: #000000;
+}
+.design_choose_items {
+    margin-top: 10px;
+}
+.design_choose_item {
+    margin-left: 0px;
+}
+.design_choose_item img{
+    width: 35px;
+    height: 35px;
+    margin-right: 3px;
+    float: left;
+    margin-bottom:4px;
+}
+.design_choose_bottom_line {
+    margin-top: 14px;
+}
+.design_price {
+    position: relative;
+    margin-top: 20px;
+    padding-left: 0;
+    color: #000000;
+}
+.design_price_title {
+    margin-top: -5px;
+    font-family: SegoeWPN-Bold;
+    font-size: 0.09375rem;
+}
+.design_price_amount {
+    margin-top: 5px;
+    font-family: SegoeWPN-Bold;
+    font-size: 0.1875rem;
+}
+.design_price_add_cart_btn {
+    position: absolute;
+    right: 0;
+    top: 0.20625rem;
+
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-family: SegoeWPN-Bold;
+    font-size: 12px;
+    color: white;
+    background: -webkit-linear-gradient(left, #391211, #931a1d); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, #391211, #931a1d); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, #391211, #931a1d); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, #391211, #931a1d); /* 标准的语法 */
+}
+.design_price_add_cart_btn:hover {
+    background:#931a1d;
+}
+
+.design_price_bottom_line {
+    margin-top: 18px;
+}
+.design_about {
+    padding-left: 0;
+    padding-top: 17px;
+    color: #000000;
+}
+.design_about_title {
+    font-family: SegoeWPN-Bold;
+    font-size: 0.09375rem;
+}
+.design_about_content {
+    margin-top: 13px;
+    font-family: SegoeWPN;
+    font-size: 0.08125rem;
+}
+.design_about_btn {
+    margin-top: 24px;
+}
+.design_about_btn div {
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: rgb(102, 102, 102);
+    background-color: #d9d9d9;
+    margin-right: 7px;
+}
+.design_about_bottom_line {
+    margin-top: 49px;
+}
+.design_show_swiper {
+    margin-top: 50px;
+    padding-left: 0;
+    padding-right: 30px;
+}
+.swiper-container {
+    width: 100%;
+}
+.swiper-pagination-bullet {
+    width: 11px;
+    height: 11px;
+    opacity: 0.102;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #b4272d;
+}
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 7px;
+}
+.design_show_swiper_page {
+    width: 100%;
+    height: 55px;
+}
+.design_show_swiper_img {
+    width: 100%;
+}
+@media (max-width: 992px) {
+    .design_show_swiper {
+        padding-right: 0;
+    }
+    .design_about_btn div {
+        display: inline-block;
+        width: 80px;
+        height: 24px;
+        line-height: 24px;
+        margin-right:5px;
+    }
+}
+
+
+.regular-radio {
+    display: none;
+}
+.regular-radio + label{
+    margin-bottom:0px;
+}
+.regular-radio + label img{
+    /*-webkit-box-shadow:0 0 2px rgba(0, 0, 0, .5);*/
+    /*-moz-box-shadow:0 0 2px rgba(0, 0, 0, .5);*/
+    /*box-shadow:0 0 2px rgba(0, 0, 0, .5);*/
+    border-radius:6px;
+}
+.regular-radio:checked + label img{
+     border:3px solid #000000;
+     border-radius:8px;
+}
+.swiper-slide img{
+    width: calc( 100% - 10px);
+    margin-left: 5px;
+    -webkit-box-shadow:0 0 5px rgba(0, 0, 0, .5);
+    -moz-box-shadow:0 0 5px rgba(0, 0, 0, .5);
+    box-shadow:0 0 5px rgba(0, 0, 0, .5);
+}

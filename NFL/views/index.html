@@ -76,7 +76,7 @@
         <div class="row">
           <div class="col-xs-4 col-md-4 col-lg-4 col-sm-4 share">
             <div>
-              <a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=967195e36e82faa2d340cd0e6fcbfdf5d23b5d60343d32b4e0e93c462c5ad1fe">
+              <a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=2f9ccf249a5efa28f8d88368009690c7e4cb08a333979f80715598a223bd7316">
                 <i class="qq"></i>
                 <div>加入Q群</div>
               </a>
@@ -229,14 +229,16 @@
       var std = 1920,width = $(window).width(),tag = 0.1427;
       var ratio = width/1920;
       var bottomHeight = width*tag;
-       if (width<=1250) {
+      if (width<=1250) {
         $(".pc .main-body .bottom").css("height",bottomHeight).css("margin-top",0-width*tag - 30 );
+        $(".main-body .bottom .content .line.vertical").css("height", bottomHeight * 0.75 + 30 );
       } else {
       $(".pc .main-body .bottom").css("height",bottomHeight).css("margin-top",0-width*tag );
+      $(".main-body .bottom .content .line.vertical").css("height", bottomHeight * 0.75 );
       }
       console.log("resize"+width)
       $(".main-body .bottom .content").css("padding-top", 30*ratio)
-      $(".main-body .bottom .content .line.vertical").css("height", bottomHeight * 0.75 );
+      
      
       $(".video .button").css("width", 282*ratio);
       $(".video .button").css("height", 175*ratio);

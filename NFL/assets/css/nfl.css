@@ -18,7 +18,6 @@
         'WenQuanYi Micro Hei', SimSun, sans-serif;
         background: none;
         overflow-x: hidden;
-        overflow-y: hidden; 
     }
 
     ul, li {
@@ -70,7 +69,7 @@
     }
     .main-body .line.horizontal {
       height: 1px;
-      background:#59b5fa;
+      background:rgb(89, 181, 250);
     }
     .main-body .bottom {
     }
@@ -100,6 +99,7 @@
       display: inline-block;
       left: 8px;
       font-size: 0.1625rem;
+
       line-height: 1;
       color: rgb(255, 255, 255);
     }
@@ -111,10 +111,11 @@
       overflow: auto;
       text-align: left;
       font-size: 0.0875rem;
+      font-family: "Microsoft YaHei";
     }
     .main-body .bottom .content .line.vertical {
       display: inline-block;
-      background:#59b5fa;
+      background:rgb(89, 181, 250);
       width: 1px;
       vertical-align: top;
       margin-left: 120px;
@@ -198,7 +199,7 @@
       }
       .video .button {
         margin: 0 auto;
-        margin-top: 20%;
+        margin-top: 16%;
         width: 282px;
         height: 175px;
         padding: 0px;
@@ -207,7 +208,7 @@
         position: -2px -2px;
         background-image: url("../images/video_bg.png");
       }
-      .video .button img {
+      .video .button>img {
         display: block;
         padding: 2px;
       }
@@ -215,14 +216,28 @@
         margin: 0 auto;
       }
       .video .button .ball img {
+        display: block;
         margin: 0 auto;
         margin-top: -150px;
         width:100px;
         height: 100px;
-        animation:ball 3s infinite linear;
-        -moz-animation:ball 3s infinite linear; /* Firefox */
-        -webkit-animation:ball 3s infinite linear; /* Safari and Chrome */
-        -o-animation:ball 3s infinite linear; /* Opera */
+        /*animation:ball 3s infinite linear;*/
+        /*-moz-animation:ball 3s infinite linear; *//* Firefox */
+        /*-webkit-animation:ball 3s infinite linear; *//* Safari and Chrome */
+        /*-o-animation:ball 3s infinite linear;*/ /* Opera */
+      }
+      .video .button .ball img.outer {
+        width:100px;
+        height: 100px;
+      }
+      .video .button .ball img.middle {
+        width:80px;
+        height: 80px;
+      }
+
+      .video .button .ball img.ball {
+        width:60px;
+        height: 60px;
       }
        .dialog.video {
         position: absolute;
@@ -301,6 +316,9 @@
     }
     .mobile {
       display: block;
+    }
+    .mobile .bg {
+      vertical-align: bottom;
     }
      .bottom {
         background:rgba(28,45,78,0.7);

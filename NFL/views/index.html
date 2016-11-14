@@ -36,10 +36,6 @@
          $(".mask").css("display","block");
         $(".enter").css("display","block");
       }
-      var clickQQ = function() {
-        $(".mask").css("display","block");
-        $(".qq").css("display","block");
-      }
       var clickCancel = function() {
         $(".mask").css("display","none");
         $(".dialog").css("display","none");
@@ -111,14 +107,16 @@
   </div>
 </section>
 <div class="video" >
-<div class="button" onclick="showVideo()">
-  <div class="content">
-    <img src="../assets/images/video_bg_img.png">
-    <div class="ball"> 
-    <img src="../assets/images/ball.png" />
+  <div class="button" onclick="showVideo()">
+    <div class="content">
+      <img src="../assets/images/video_bg_img.png">
+      <div class="ball"> 
+      <img class="outer" src="../assets/images/broad_outer.png" />
+      <img class="middle" src="../assets/images/broad_middle.png" />
+      <img class="ball" src="../assets/images/broad_ball.png" />
+      </div>
     </div>
   </div>
-</div>
 </div>
 <div class="mask" onclick="clickMask()" >
 </div>
@@ -130,7 +128,8 @@
 </div>
 <div class="mobile">
   <div class="bg">
-      <img src="../assets/images/mobile_bg.jpg">
+      <img src="../assets/images/bg_mobile.jpg">
+      <!-- <img src="../assets/images/mobile_bg.jpg"> -->
   </div>
   <div class="container bottom">
       <div class="row">
@@ -153,8 +152,11 @@
         </a>
         </div>
         <div class="col-xs-3 col-md-3 col-lg-3 col-sm-3 menu" onclick="clickQQ()">
+        <a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=2f9ccf249a5efa28f8d88368009690c7e4cb08a333979f80715598a223bd7316">
+                
         <img src="../assets/images/qq.png">
         加入Q群
+        </a>
         </div>
     </div>
   </div>
@@ -230,11 +232,11 @@
       var ratio = width/1920;
       var bottomHeight = width*tag;
       if (width<=1250) {
-        $(".pc .main-body .bottom").css("height",bottomHeight).css("margin-top",0-width*tag - 30 );
-        $(".main-body .bottom .content .line.vertical").css("height", bottomHeight * 0.75 + 30 );
+        $(".pc .main-body .bottom").css("height",bottomHeight).css("margin-top",0-width*tag - 50 );
+        $(".main-body .bottom .content .line.vertical").css("height", bottomHeight * 0.75 + 50 );
       } else {
-      $(".pc .main-body .bottom").css("height",bottomHeight).css("margin-top",0-width*tag );
-      $(".main-body .bottom .content .line.vertical").css("height", bottomHeight * 0.75 );
+      $(".pc .main-body .bottom").css("height",bottomHeight).css("margin-top",0-width*tag -20 );
+      $(".main-body .bottom .content .line.vertical").css("height", bottomHeight * 0.75+20 );
       }
       console.log("resize"+width)
       $(".main-body .bottom .content").css("padding-top", 30*ratio)
@@ -242,10 +244,13 @@
      
       $(".video .button").css("width", 282*ratio);
       $(".video .button").css("height", 175*ratio);
-       $(".video .button img").css("width", 282*ratio-2);
-      $(".video .button img").css("height", 175*ratio-2);
-      $(".video .button .ball img").css("width",100*ratio);
-      $(".video .button .ball img").css("margin-top",0-170*ratio);
+       $(".video .button .content>img").css("width", 282*ratio-2);
+      $(".video .button .content>img").css("height", 175*ratio-2);
+      $(".video .button .content>.ball").css("margin-top",0-175*ratio+2)
+        .css("height",175*ratio-2).css("background","red");
+
+      // $(".video .button .ball img").css("width",100*ratio);
+      // $(".video .button .ball img").css("margin-top",0-175*ratio);
     }
    $(window).resize(resizeBottom);
    resizeBottom();

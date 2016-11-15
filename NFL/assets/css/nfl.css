@@ -14,8 +14,7 @@
     body {
         height: 100%;
         color: #666;
-        font-family: 'Microsoft  YaHei','Adobe Heiti Std','SegoeWP', 'SegoeWPN', 'SegoeWPN-Bold', 'DroidSansFallback', 'Aileron Regular', 'STHeiti', 'simhei', 'Open Sans', Arial, 'Hiragino Sans GB',  微软雅黑,
-        'WenQuanYi Micro Hei', SimSun, sans-serif;
+        font-family: 'Microsoft YaHei','Adobe Heiti Std';
         background: none;
         overflow-x: hidden;
     }
@@ -108,7 +107,7 @@
       color: rgb(230, 230, 230);
       width: 340px;
       height: 136px;
-      overflow: auto;
+      overflow: hidden;
       text-align: left;
       font-size: 0.0875rem;
       font-family: "Microsoft YaHei";
@@ -368,8 +367,8 @@
       padding-top: 0px;      
     }
     .main-body .bottom .content .qrcode img{
-      width: 110px;
-      height: 110px;
+      width: 106px;
+      height: 106px;
     }
     .main-body .bottom .content .download .android{
       margin-top: 10px;

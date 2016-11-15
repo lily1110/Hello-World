@@ -205,39 +205,59 @@
         padding: 0px;
         border:2px white solid;
         border-radius: 0;
-        position: -2px -2px;
         background-image: url("../images/video_bg.png");
       }
-      .video .button>img {
+      /*.video .button>img {
         display: block;
         padding: 2px;
-      }
+      }*/
       .video .button .ball {
         margin: 0 auto;
       }
+      .video .button .ball div {
+        display: table-cell;
+        vertical-align: middle;
+        height: 141.646px;
+        text-align: center;
+        margin: 0 auto;
+        width: 220px;
+      }
       .video .button .ball img {
+        /*position: absolute;*/
         display: block;
         margin: 0 auto;
-        margin-top: -150px;
+        /*margin-top: -150px;*/
         width:100px;
         height: 100px;
-        /*animation:ball 3s infinite linear;*/
-        /*-moz-animation:ball 3s infinite linear; *//* Firefox */
-        /*-webkit-animation:ball 3s infinite linear; *//* Safari and Chrome */
-        /*-o-animation:ball 3s infinite linear;*/ /* Opera */
+        top: 0;
+       
       }
       .video .button .ball img.outer {
+
         width:100px;
         height: 100px;
+
+        animation:outer-ball 3s infinite linear;
+        -moz-animation:outer-ball 3s infinite linear; /* Firefox */
+        -webkit-animation:outer-ball 3s infinite linear; /* Safari and Chrome */
+        -o-animation:outer-ball 3s infinite linear; /* Opera */
       }
       .video .button .ball img.middle {
         width:80px;
         height: 80px;
+         animation:middle-ball 3s infinite linear;
+        -moz-animation:middle-ball 3s infinite linear; /* Firefox */
+        -webkit-animation:middle-ball 3s infinite linear; /* Safari and Chrome */
+        -o-animation:middle-ball 3s infinite linear; /* Opera */
       }
 
       .video .button .ball img.ball {
         width:60px;
         height: 60px;
+         animation:ball 3s infinite linear;
+        -moz-animation:ball 3s infinite linear; /* Firefox */
+        -webkit-animation:ball 3s infinite linear; /* Safari and Chrome */
+        -o-animation:ball 3s infinite linear; /* Opera */
       }
        .dialog.video {
         position: absolute;
@@ -250,30 +270,60 @@
         max-width: 100%;
       }
 
-      @keyframes ball
-      {
-      from {width:30px; height: 30px;}
-      to {width:130px;height:130px;}
+@keyframes outer-ball {
+      0% {
+          transform: scale(0.8);
       }
-
-      @-moz-keyframes ball /* Firefox */
-      {
-      from {width:30px;height: 30px;}
-      to {width:130px;height:130px;}
+      25% {
+          transform: scale(1.0);
       }
-
-      @-webkit-keyframes ball /* Safari and Chrome */
-      {
-      from {width:30px;height: 30px;}
-      to {width:130px;height:130px;}
+      50% {
+          transform: scale(1.02);
       }
-
-      @-o-keyframes ball /* Opera */
-      {
-      from {width:30px;height: 30px;}
-      to {width:130px;height:130px;}
+      75% {
+          transform: scale(1.0);
       }
+      100% {
+          transform: scale(0.8);
+      }
+}
+      
 
+
+@keyframes middle-ball {
+   0% {
+          transform: scale(0.8);
+      }
+      25% {
+          transform: scale(1.0);
+      }
+      50% {
+          transform: scale(1.02);
+      }
+      75% {
+          transform: scale(1.0);
+      }
+      100% {
+          transform: scale(0.8);
+      }
+}
+@keyframes ball{
+      0% {
+          transform: scale(0.8);
+      }
+      25% {
+          transform: scale(1.0);
+      }
+      50% {
+          transform: scale(1.02);
+      }
+      75% {
+          transform: scale(1.0);
+      }
+      100% {
+          transform: scale(0.8);
+      }
+}
 @media (max-width: 1520px) {
     .main-body .bottom .content .brief .detail {
         width: 300px;
@@ -307,7 +357,7 @@
     }
 
 }
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
     i {
       font-style: normal;
     }
@@ -317,11 +367,17 @@
     .mobile {
       display: block;
     }
+
+    .mobile .bg .pad {
+      display: block;
+    }
+    .mobile .bg .mobile {
+      display: none;
+    }
     .mobile .bg {
       vertical-align: bottom;
     }
      .bottom {
-        background:rgba(28,45,78,0.7);
         width: 100%;
         position: fixed;
         height: 9%;
@@ -343,7 +399,12 @@
         text-align: center;
         font-size: 12px;
         color: rgb(255, 255, 255);
+        background:rgb(46,68,108);
         line-height: 1.6;
+      }
+      .bottom .menus .menu:hover {
+        background:rgb(29,47,79);
+
       }
        .bottom .menus .menu:last-child {
          border-right:none;
@@ -477,3 +538,12 @@
     }
 }
 
+@media (max-width: 740px)  {
+
+    .mobile .bg .pad {
+      display: none;
+    }
+    .mobile .bg .mobile {
+      display: block;
+    }
+}

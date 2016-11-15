@@ -111,9 +111,15 @@
     <div class="content">
       <img src="../assets/images/video_bg_img.png">
       <div class="ball"> 
-      <img class="outer" src="../assets/images/broad_outer.png" />
-      <img class="middle" src="../assets/images/broad_middle.png" />
-      <img class="ball" src="../assets/images/broad_ball.png" />
+        <div>
+          <img class="outer" src="../assets/images/broad_outer.png" />
+        </div>
+        <div>
+          <img class="middle" src="../assets/images/broad_middle.png" />
+        </div>
+        <div>
+          <img class="ball" src="../assets/images/broad_ball.png" />
+        </div>
       </div>
     </div>
   </div>
@@ -128,8 +134,8 @@
 </div>
 <div class="mobile">
   <div class="bg">
-      <img src="../assets/images/bg_mobile.jpg">
-      <!-- <img src="../assets/images/mobile_bg.jpg"> -->
+      <img class="pad" src="../assets/images/pad_bg.jpg">
+      <img class="mobile" src="../assets/images/mobile_bg.jpg">
   </div>
   <div class="container bottom">
       <div class="row">
@@ -232,14 +238,17 @@
       var ratio = width/1920;
       var bottomHeight = width*tag;
       if (width<=1250) {
-        $(".pc .main-body .bottom").css("height",bottomHeight).css("margin-top",0-width*tag - 50 );
-        $(".main-body .bottom .content .line.vertical").css("height", bottomHeight * 0.75 + 50 );
+        $(".pc .main-body .bottom").css("height",bottomHeight).css("margin-top",0-width*tag - 10 );
+        $(".main-body .bottom .content .line.vertical").css("height", bottomHeight * 0.75 + 5 );
+        $(".main-body .bottom .content").css("padding-top", 30*ratio-5)
+
       } else {
-      $(".pc .main-body .bottom").css("height",bottomHeight).css("margin-top",0-width*tag -20 );
-      $(".main-body .bottom .content .line.vertical").css("height", bottomHeight * 0.75+20 );
+      $(".pc .main-body .bottom").css("height",bottomHeight).css("margin-top",0-width*tag );
+      $(".main-body .bottom .content .line.vertical").css("height", bottomHeight * 0.75 );
+      $(".main-body .bottom .content").css("padding-top", 30*ratio)
+
       }
       console.log("resize"+width)
-      $(".main-body .bottom .content").css("padding-top", 30*ratio)
       
      
       $(".video .button").css("width", 282*ratio);

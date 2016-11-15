@@ -106,8 +106,8 @@
     .main-body .bottom .content .brief .detail {
       margin-top: 10px;
       color: rgb(230, 230, 230);
-      width: 397.033px;
-      height: 133.431px;
+      width: 340px;
+      height: 136px;
       overflow: auto;
       text-align: left;
       font-size: 0.0875rem;
@@ -132,7 +132,7 @@
     }
 
     .main-body .bottom .content .share div div{
-      padding-top: 8px;      
+      padding-top: 5px;      
     }
     .main-body .bottom .content .share i {
       display: block;
@@ -336,8 +336,7 @@
 }
 @media (max-width: 1520px) {
     .main-body .bottom .content .brief .detail {
-        width: 300px;
-        font-size: 0.075rem;
+        width: 360px;
     }
     .main-body .bottom .content .line.vertical {
       margin-right: 10px;
@@ -357,13 +356,29 @@
     }
 }
 @media (max-width: 1200px) {
-    
+    .main-body .bottom .content .brief .detail {
+      width: 320px;
+      font-size: 0.075rem;
+
+    }
     .main-body .bottom .content .download {
       font-size: 0.075rem;
+    }
+    .main-body .bottom .content .share div div{
+      padding-top: 0px;      
     }
     .main-body .bottom .content .qrcode img{
       width: 110px;
       height: 110px;
+    }
+    .main-body .bottom .content .download .android{
+      margin-top: 10px;
+    }
+    .main-body .bottom .content .share .toWeibo {
+      margin-top: -8px;
+    }
+    .main-body .bottom .content .share i {
+      margin-bottom: 2px;
     }
 
 }

@@ -352,8 +352,8 @@
       font-size: 0.075rem;
     }
     .main-body .bottom .content .qrcode img{
-      width: 80px;
-      height: 80px; 
+      width: 125px;
+      height: 125px; 
     }
 }
 @media (max-width: 1200px) {
@@ -362,8 +362,8 @@
       font-size: 0.075rem;
     }
     .main-body .bottom .content .qrcode img{
-      width: 80px;
-      height: 80px;
+      width: 110px;
+      height: 110px;
     }
 
 }

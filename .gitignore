@@ -8,3 +8,4 @@
 /360Mall-master/src/main/webapps/main.iml
 *.zip
 *.rar
+.DS_Store

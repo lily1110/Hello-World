@@ -14,7 +14,7 @@
     body {
         height: 100%;
         color: #666;
-        font-family: 'Microsoft YaHei','Adobe Heiti Std','SegoeWP', 'SegoeWPN', 'SegoeWPN-Bold', 'DroidSansFallback', 'Aileron Regular', 'STHeiti', 'simhei', 'Open Sans', Arial, 'Hiragino Sans GB',  微软雅黑,
+        font-family: 'Microsoft  YaHei','Adobe Heiti Std','SegoeWP', 'SegoeWPN', 'SegoeWPN-Bold', 'DroidSansFallback', 'Aileron Regular', 'STHeiti', 'simhei', 'Open Sans', Arial, 'Hiragino Sans GB',  微软雅黑,
         'WenQuanYi Micro Hei', SimSun, sans-serif;
         background: none;
         overflow-x: hidden;
@@ -78,7 +78,7 @@
     }
     .main-body .bottom .content .brief {
       display: inline-block;
-      font-family: "MicrosoftYaHei";
+      font-family: "Microsoft YaHei";
     }
     .main-body .bottom .content .brief .title {
       position: relative;
@@ -537,7 +537,7 @@
      .dialog.enter  {
       line-height: 2;
       font-size: 14px;
-      font-family: "MicrosoftYaHei";
+      font-family: "Microsoft YaHei";
      }
      .dialog.enter  .detail {
       padding: 50px 0;

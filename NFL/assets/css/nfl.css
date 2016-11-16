@@ -62,29 +62,27 @@
         position: absolute;
         height: auto;
       }
-    .main-body {
-      position: relative;
-      text-align: center;
-    }
+    
+
     .main-body .line.horizontal {
       height: 1px;
       background:rgb(89, 181, 250);
     }
     .main-body .bottom {
     }
-    .main-body .bottom .content {
+    .main-body .bottom .contents {
       padding-top: 30px;
     }
-    .main-body .bottom .content .brief {
+    .main-body .bottom .contents .brief {
       display: inline-block;
       font-family: "Microsoft YaHei";
     }
-    .main-body .bottom .content .brief .title {
+    .main-body .bottom .contents .brief .title {
       position: relative;
       display: block;
       height: 28px;
     }
-    .main-body .bottom .content .brief .title i {
+    .main-body .bottom .contents .brief .title i {
       position: absolute;
       left: 0px;
       display: inline-block;
@@ -93,16 +91,16 @@
       height: 26px;
       line-height: 1;
     }
-    .main-body .bottom .content .brief .title div {
+    .main-body .bottom .contents .brief .title div {
       position: absolute;
       display: inline-block;
       left: 8px;
       font-size: 0.1625rem;
-
+      top: 3px;
       line-height: 1;
       color: rgb(255, 255, 255);
     }
-    .main-body .bottom .content .brief .detail {
+    .main-body .bottom .contents .brief .detail {
       margin-top: 10px;
       color: rgb(230, 230, 230);
       width: 340px;
@@ -112,66 +110,67 @@
       font-size: 0.0875rem;
       font-family: "Microsoft YaHei";
     }
-    .main-body .bottom .content .line.vertical {
-      display: inline-block;
+    .main-body .bottom .contents .line.vertical {
+      /*display: inline-block;*/
       background:rgb(89, 181, 250);
       width: 1px;
       vertical-align: top;
-      margin-left: 110px;
-      margin-right: 10px;
+    /*  margin-left: 110px;
+      margin-right: 10px;*/
     } 
-    .main-body .bottom .content .share {
+    .main-body .bottom .contents .share {
       display: inline-block;
-      font-size: 0.1125rem;
+      font-size: 0.0875rem;
       line-height: 1.2;
       color: rgb(254, 254, 254);
     }
-    .main-body .bottom .content .share div{
+    .main-body .bottom .contents .share div{
       text-align: center;
     }
 
-    .main-body .bottom .content .share div div{
+    .main-body .bottom .contents .share div div{
       padding-top: 5px;      
     }
-    .main-body .bottom .content .share i {
+    .main-body .bottom .contents .share i {
       display: block;
       width: 49px;
       height: 49px;
       margin: 0 auto;
     }
-    .main-body .bottom .content .share .qq {
+    .main-body .bottom .contents .share .qq {
        background-position: 0 0;
        background-image: url("../images/qq-weibo.png");
     }  
-    .main-body .bottom .content .share .weibo {
+    .main-body .bottom .contents .share .weibo {
       background-position: 0 -96px;
       background-image: url("../images/qq-weibo.png");
       margin-top: 20px;
     }
-    .main-body .bottom .content .download {
+    .main-body .bottom .contents .download {
       display: inline-block;
-      font-size: 0.1125rem;
+      font-size: 0.0875rem;
       color: rgb(255, 255, 255);
       line-height: 1.577;
       text-align: left;
       vertical-align: top;
     }
-    .main-body .bottom .content .download img{
+    .main-body .bottom .contents .download img{
       display: block;
       vertical-align: top;
       max-width: 180px;
       height: 49px;
     }
-    .main-body .bottom .content .download .android {
+    .main-body .bottom .contents .download .android {
       margin-top: 20px;
     }
-    .main-body .bottom .content .qrcode{
+    .main-body .bottom .contents .qrcode{
       display: inline-block;
       text-align: center;
       color: rgb(255, 255, 255);
+      font-size: 0.0875rem;
     }
 
-    .main-body .bottom .content .qrcode img{
+    .main-body .bottom .contents .qrcode img{
       display: block;
       width: 139px;
       margin:0 auto;
@@ -179,9 +178,10 @@
     .mask {
       position: absolute;
       top: 0;
+      background:black;
       background:rgba(0,0,0,0.702);
       width: 100%;
-      height: 100%;
+      height: 200%;
      }
     .mobile {
       display: none;
@@ -268,9 +268,15 @@
         left: 20%;
         top: 10%;
         height: auto;
+
       }
        .dialog.video video {
         width: 100%;
+      }
+
+       .dialog.video embed {
+        display: block;
+        margin: 0 auto;
       }
 
 @keyframes outer-ball {
@@ -334,49 +340,42 @@
       }
 }
 @media (max-width: 1520px) {
-    .main-body .bottom .content .brief .detail {
+    .main-body .bottom .contents .brief .detail {
         width: 360px;
     }
-    .main-body .bottom .content .line.vertical {
+    .main-body .bottom .contents .line.vertical {
       margin-right: 10px;
     } 
-    .main-body .bottom .content .share {
-      font-size: 0.075rem;
-    }
-    .main-body .bottom .content .share div div{
+    .main-body .bottom .contents .share div div{
       padding-top: 4px;      
     }
-    .main-body .bottom .content .download {
-      font-size: 0.075rem;
-    }
-    .main-body .bottom .content .qrcode img{
+    .main-body .bottom .contents .qrcode img{
       width: 125px;
       height: 125px; 
     }
 }
 @media (max-width: 1200px) {
-    .main-body .bottom .content .brief .detail {
+    .main-body .bottom .contents .brief .detail {
       width: 320px;
-      font-size: 0.075rem;
 
     }
-    .main-body .bottom .content .download {
+    .main-body .bottom .contents .brief .detail,.main-body .bottom .contents .download,.main-body .bottom .contents .share,.main-body .bottom .contents .qrcode{
       font-size: 0.075rem;
     }
-    .main-body .bottom .content .share div div{
+    .main-body .bottom .contents .share div div{
       padding-top: 0px;      
     }
-    .main-body .bottom .content .qrcode img{
+    .main-body .bottom .contents .qrcode img{
       width: 106px;
       height: 106px;
     }
-    .main-body .bottom .content .download .android{
+    .main-body .bottom .contents .download .android{
       margin-top: 10px;
     }
-    .main-body .bottom .content .share .toWeibo {
+    .main-body .bottom .contents .share .toWeibo {
       margin-top: -8px;
     }
-    .main-body .bottom .content .share i {
+    .main-body .bottom .contents .share i {
       margin-bottom: 2px;
     }
 

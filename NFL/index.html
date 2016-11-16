@@ -1,34 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>home</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>天天NFL</title>
+
+    
+    <link rel="stylesheet" type="text/css" href="assets/public/bootstrap/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" type="text/css" href="assets/css/fonts.css" />
+
+    <link rel="stylesheet" type="text/css" href="assets/css/nfl.css" />
+   
     <!--[if lt IE 8]>
     <script>alert("您的浏览器版本太低了，本站对IE8以下版本浏览器无法提供支持，为保证更好的浏览体验，请升级您的IE或下载其它浏览器。推荐Chrome, Firefox, 360浏览器等!");window.close();
     </script>
     <![endif]-->
-    <!--[if lt IE9]>
-    <script src="../assets/public/html5shiv.js"></script>
-    <script src="../assets/public/respond.js"></script>
+    <!--[if lt IE 9]>
+    <script src="assets/public/html5shiv.min.js"></script>
+    <script src="assets/public/respond.min.js"></script>
     <![endif]-->
-    <link rel="stylesheet" type="text/css" href="../assets/public/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="../assets/css/fonts.css" />
-
-    <link rel="stylesheet" type="text/css" href="../assets/css/nfl.css" />
-    <style type="text/css">
-    </style>
-
-    <script src="../assets/public/jquery-2.2.3.min.js"></script>
-    <script src="../assets/public/bootstrap/js/bootstrap.js"></script>
+    <script src="assets/public/jquery-1.9.1.min.js"></script>
+    <script src="assets/public/bootstrap/js/bootstrap.js"></script>
     <script type="text/javascript">
+      var hiddenOverFlow = function() {
+        $("body").css("overflow","hidden");
+      }
+
+      var autoOverFlow = function() {
+        $("body").css("overflow-y","auto");
+      }
       var showVideo = function() {
          $(".mask").css("display","block");
         $(".dialog.video").css("display","block");
+        hiddenOverFlow();
       }
       var clickMask = function() {
         $(".mask").css("display","none");
         $(".dialog").css("display","none");
+        autoOverFlow();
       }
       var clickBrief = function() {
         $(".mask").css("display","block");
@@ -42,12 +52,12 @@
         $(".mask").css("display","none");
         $(".dialog").css("display","none");
       }
-
+     
     </script>
 <body>
 <div class="pc">
 <div class="bg">
-    <img src="../assets/images/pc_bg.jpg">
+    <img src="assets/images/pc_bg.jpg">
   </div>
 <section class="container main-body">  
 <div class="row">
@@ -57,18 +67,25 @@
       <div class="col-xs-12 col-md-12 col-lg-12 col-sm-12 line horizontal">
       </div>
     </div>
-    <div class="row content">
+    <div class="row contents">
       <div class="col-xs-6 col-md-6 col-lg-6 col-sm-6">
-        <div class="brief">
-          <div class="title">
-            <i></i>
-            <div>游戏简介</div>
+        <div class="row">
+          <div class="col-xs-11 col-md-11 col-lg-11 col-sm-11">
+             <div class="brief">
+                <div class="title">
+                  <i></i>
+                  <div>游戏简介</div>
+                </div>
+                <div class="detail">
+                  《天天NFL》是一款以美式橄榄球为题材，集数据分析、策略、竞技为一体的休闲体育类手机网络游戏。在游戏中，玩家有机会把真实世界中的NFL球星自由组合成一支队伍，根据球员在真实赛事中的实际数据表现计分，通过游戏锻炼玩家对NFL赛事的理解和数据分析能力。玩家可以用数据统治NFL赛场，体验NFL的数据竞技的乐趣。
+                </div>
+              </div>
           </div>
-          <div class="detail">
-            《天天NFL》是一款以美式橄榄球为题材，集数据分析、策略、竞技为一体的休闲体育类手机网络游戏。在游戏中，玩家有机会把真实世界中的NFL球星自由组合成一支队伍，根据球员在真实赛事中的实际数据表现计分，通过游戏锻炼玩家对NFL赛事的理解和数据分析能力。玩家可以用数据统治NFL赛场，体验NFL的数据竞技的乐趣。
+          <div class="col-xs-1 col-md-1 col-lg-1 col-sm-1">
+          <div class="line vertical"></div>
           </div>
         </div>
-        <div class="line vertical"></div>
+       
       </div>
       <div class="col-xs-6 col-md-6 col-lg-6 col-sm-6">
         <div class="row">
@@ -89,16 +106,16 @@
           </div>
           <div class="col-xs-4 col-md-4 col-lg-4 col-sm-4 download">
             <div>
-              <img src="../assets/images/appStore.png"／>
+              <img src="assets/images/appStore.png"／>
               <div>暂未开放</div>
             </div>
             <div class="android">
-              <img src="../assets/images/android.png"／>
+              <img src="assets/images/android.png"／>
               <div>暂未开放</div>
             </div>
           </div>
           <div class="col-xs-4 col-md-5 col-lg-4 col-sm-5  qrcode">
-              <img src="../assets/images/qrcode.png"／>
+              <img src="assets/images/qrcode.png"／>
               <div>扫码关注官方微信<br>即刻开启游戏</div>
           </div>
         </div>
@@ -110,22 +127,22 @@
 </section>
 <div class="video" >
   <div class="button" onclick="showVideo()">
-    <div class="content">
-      <img src="../assets/images/video_bg_img.png">
+    <div class="contents">
+      <img src="assets/images/video_bg_img.png">
       <div class="ball"> 
         <div class="outer">
           <div class="cell">
-            <img class="outer" src="../assets/images/broad_outer.png" />
+            <img class="outer" src="assets/images/broad_outer.png" />
           </div>
         </div>
         <div class="middle">
           <div class="cell">
-            <img class="middle" src="../assets/images/broad_middle.png" />
+            <img class="middle" src="assets/images/broad_middle.png" />
           </div>
         </div>
         <div class="ball">
           <div class="cell">
-            <img class="ball" src="../assets/images/broad_ball.png" />
+            <img class="ball" src="assets/images/broad_ball.png" />
           </div>
         </div>
       </div>
@@ -135,15 +152,14 @@
 <div class="mask" onclick="clickMask()" >
 </div>
 <div class="dialog video" >
-  <video controls style="display: block;" onclick="showVideo()">
-  <source src="http://222.73.3.74/vhot2.qqvideo.tc.qq.com/l0346jg0xks.p703.1.mp4?sdtfrom=v1010&guid=8a6e0a8423ae9e60b9e6f2018afce607&vkey=7B251B53E06D0A6191499955B3ADCCBD2D1AB142E4A1E908FCDF0B258B42EB34AC0797434E676C4E0E04F644469F8DB9D4729EA9773110EDA4062D8DDD28C81715A8A3965702F1742FDA6753863DFD2B0291FCE647E16B7D" type="video/mp4"></video>
+  <embed  src="http://static.video.qq.com/TPout.swf?vid=l0346jg0xks&auto=0" allowFullScreen="true" quality="high" width="100%" height="500" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
 </div>
 
 </div>
 <div class="mobile">
   <div class="bg">
-      <img class="pad" src="../assets/images/pad_bg.jpg">
-      <img class="mobile" src="../assets/images/mobile_bg_large.jpg">
+      <img class="pad" src="assets/images/pad_bg.jpg">
+      <img class="mobile" src="assets/images/mobile_bg_large.jpg">
   </div>
   <div class="container bottom">
       <div class="row">
@@ -152,23 +168,23 @@
       </div>
        <div class="row menus">
         <div class="col-xs-3 col-md-3 col-lg-3 col-sm-3 menu mobile" onclick="clickBrief()">
-        <img src="../assets/images/mobile.png">
+        <img src="assets/images/mobile.png">
         游戏简介
         </div>
         <div class="col-xs-3 col-md-3 col-lg-3 col-sm-3 menu" onclick="clickEnter()">
-        <img src="../assets/images/wechat.png">
+        <img src="assets/images/wechat.png">
         进入游戏
         </div>
         <div class="col-xs-3 col-md-3 col-lg-3 col-sm-3 menu">
         <a href="http://weibo.com/u/6017513425">
-        <img src="../assets/images/weibo.png">
+        <img src="assets/images/weibo.png">
         关注微博
         </a>
         </div>
         <div class="col-xs-3 col-md-3 col-lg-3 col-sm-3 menu" onclick="clickQQ()">
         <a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=2f9ccf249a5efa28f8d88368009690c7e4cb08a333979f80715598a223bd7316">
                 
-        <img src="../assets/images/qq.png">
+        <img src="assets/images/qq.png">
         加入Q群
         </a>
         </div>
@@ -201,7 +217,7 @@
        </div>
     </div>
     <div class="detail">
-     <img src="../assets/images/qrcode.png" />
+     <img src="assets/images/qrcode.png" />
      <p>微信公众号：天天NFL</p>
      <i>长按关注微信公众号进入游戏</i>
     </div>
@@ -215,7 +231,7 @@
        </div>
     </div>
     <div class="detail">
-     <img src="../assets/images/user.png" />
+     <img src="assets/images/user.png" />
      <i>Q Q 群: 365946210</i>
     </div>
     </div>
@@ -223,7 +239,6 @@
 </div>
 <script type="text/javascript">
     (function (doc, win) {
-      console.log("gg")
         var docEl = doc.documentElement,
                 resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
                 recalc = function () {
@@ -242,35 +257,28 @@
        
     })(document, window);
     var resizeBottom = function() {
-      var std = 1920,width = $(window).width(),tag = 0.1427;
+      var std = 1920,width = $(window).width(),tag = 0.148;
       var ratio = width/1920;
       var bottomHeight = width*tag;
       if (width<=1250) {
         $(".pc .main-body .bottom").css("height",bottomHeight).css("margin-top",0-width*tag - 10 );
-        $(".main-body .bottom .content .line.vertical").css("height", bottomHeight * 0.75 + 5 );
-        $(".main-body .bottom .content").css("padding-top", 30*ratio-5)
-
+        $(".main-body .bottom>.contents .line.vertical").css("height", bottomHeight * 0.75 + 5 );
+        $(".main-body .bottom>.contents").css("padding-top", 30*ratio-5)
       } else {
-      $(".pc .main-body .bottom").css("height",bottomHeight).css("margin-top",0-width*tag );
-      $(".main-body .bottom .content .line.vertical").css("height", bottomHeight * 0.75 );
-      $(".main-body .bottom .content").css("padding-top", 30*ratio)
-
+        $(".pc .main-body .bottom").css("height",bottomHeight).css("margin-top",0-width*tag );
+        $(".main-body .bottom>.contents .line.vertical").css("height", bottomHeight * 0.75 );
+        $(".main-body .bottom>.contents").css("padding-top", 30*ratio);
       }
-      console.log("resize"+width)
-      
-     
       $(".video .button").css("width", 282*ratio);
       $(".video .button").css("height", 175*ratio);
-       $(".video .button .content>img").css("width", 282*ratio-2);
-      $(".video .button .content>img").css("height", 175*ratio-2);
-      $(".video .button .content>.ball").css("margin-top",0-175*ratio+2)
-      .css("height",175*ratio-2);
-      $(".video .button .content .cell").css("width",282*ratio)
-      $(".video .button .content .cell").css("height",175*ratio)
-      $(".video .button .ball>.middle").css("margin-top", 0-175*ratio)
-      $(".video .button .ball>.ball").css("margin-top", 0-175*ratio)
-      // $(".video .button .ball img").css("width",100*ratio);
-      // $(".video .button .ball img").css("margin-top",0-175*ratio);
+      $(".video .button .contents>img").css("width", 282*ratio-2);
+      $(".video .button .contents>img").css("height", 175*ratio-2);
+      $(".video .button .contents>.ball").css("margin-top",0-175*ratio+2);
+      $(".video .button .contents>.ball").css("height",175*ratio-2);
+      $(".video .button .contents .cell").css("width",282*ratio);
+      $(".video .button .contents .cell").css("height",175*ratio);
+      $(".video .button .ball>.middle").css("margin-top", 0-175*ratio);
+      $(".video .button .ball>.ball").css("margin-top", 0-175*ratio);
     }
    $(window).resize(resizeBottom);
    resizeBottom();
